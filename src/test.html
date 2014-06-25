@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+    hi
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+    <script>
+
+    window.fbAsyncInit=function() {
+      Parse.initialize("uoLNyTf6MN2bETfSpU9f9NCqmxjcZEVRZ2mvhS6J", "87IpuaWHjZLrUVgYyVEqjWzzLSIOk4hrFFtYYZwr");
+      Parse.FacebookUtils.init({
+       appId:'132',
+       channelUrl : '//localhost:8080/test.html', // Channel File
+       cookie     : true, // enable cookies to allow Parse to access the session
+       xfbml      : true  // parse XFBML
+      });
+    }
+
+    $( document ).ready(function() {
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/all.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+     });
+    </script>
+  </body>
+  </html>

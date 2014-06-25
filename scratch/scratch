@@ -1,0 +1,112 @@
+$scope.facebookCallback=function(authResult) {
+    if (authResult.authResponse) {                 
+      FB.api('/me', function(response) {
+        console.log("We are logged in with facebook man.  now what?");
+        UserFactory.isUserIDTaken(response.id).then(function(user_taken) {
+            console.log("Oh hi ther...");
+            if (user_taken==true) {
+                console.log("User already in db, lets signin");
+            }
+            else {
+                console.log("user needs to signup, construct ");
+                var u=angular.copy(response);
+                u['user_id']=u.id
+                u['username']=u.name;
+                delete u['id'];
+                UserFactory.signup(u['user_id'],u,'facebook');
+            }   
+        });
+         console.log(response);
+       });
+    }
+    else {
+     //fail!
+    }
+}
+
+/*
+    Callback function when google is done authorizing.
+    Should handle error here.
+*/
+$scope.googleCallback=function(authResult) {
+    var revoke=GoogleAuth.revoke();
+    if (revoke) {
+        revoke.then(function() {
+            console.log('boom revoked yo!');
+            console.log(r);               
+        })
+    }
+    console.log('hi! from signinWithGoogle');
+    console.log(authResult);
+    if (authResult['status']['signed_in']) { 
+        var p=GoogleAuth.userInfo();
+        p.then(function(user){
+            console.log(user);
+        });
+    }
+    else {
+        //error should not happen when signout occurs..
+        //$scope.message="Google SIgnIn Error: " + authResult['error'];
+    }
+}
+
+
+.factory('FacebookAuth', ['$q','$http',function($q,$http){ 
+    var facebookAuth={};
+
+    facebookAuth.revoke=function() {
+        FB.api('/me/permissions', 'delete', function(response) {
+            console.log(response); // true
+        });
+    }
+    facebookAuth.userinfo=function() {
+        var deferred=$q.defer();
+        FB.api('/me', function(response) {
+            deferred.resolve(response);
+         });
+        return deferred.promise;
+    }
+    return facebookAuth;
+}])
+
+//https://developers.facebook.com/docs/javascript/quickstart/v2.0
+.directive('facebookSignIn',function(FACEBOOK_APP_ID) {
+    return {
+        restrict:'A',
+        link: function (scope, element) {
+            var facebookSDKLoaded=false;
+            var scripts=document.getElementsByTagName('script');            
+            for (var i=0; i  < scripts.length;i++) {
+                if (scripts[i].src.indexOf("connect.facebook.net/en_US/sdk.js") > 0) {
+                    facebookSDKLoaded=true;
+                    console.log("Facebook SDK already loaded!");
+                    break;
+                }
+            }
+            if (facebookSDKLoaded==false) {
+                console.log("WE GO HER?");
+                // window.fbAsyncInit = function() {
+                //   FB.init({
+                //     appId      : FACEBOOK_APP_ID,
+                //     xfbml      : true,
+                //     version    : 'v2.0'
+                //   });
+                // };
+                // (function(d, s, id){
+                //    var js, fjs = d.getElementsByTagName(s)[0];
+                //    if (d.getElementById(id)) {return;}
+                //    js = d.createElement(s); js.id = id;
+                //    js.src = "//connect.facebook.net/en_US/sdk.js";
+                //    fjs.parentNode.insertBefore(js, fjs);
+                //  }(document, 'script', 'facebook-jssdk'));
+            }
+            element.bind('click',function() {
+                FB.login(function(response) {
+                    //call event here instead?
+                    scope.facebookCallback(response);
+                });
+            })
+        },
+    };
+});
+

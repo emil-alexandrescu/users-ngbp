@@ -1,0 +1,6 @@
+<span ng-if='signed_in' ng-controller="UsersController">
+    <a ng-href='#/myaccount'>Welcome {{username}}!</a> <a href='javascript:void(0)' ng-click='signout()'>Sign Out</a>
+</span>
+<span ng-if='!signed_in'>
+<a href='#/signin'>Sign In</a> | <a href='#/signup'>Sign Up</a>
+</span>
