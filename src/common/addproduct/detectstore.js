@@ -53,6 +53,9 @@ function BestBuyParser() {
         console.log(null);
         return null;
     }
+    this.get_cart_box=function(dom){
+        
+    }
 }
 function WalmartParser() {
     this.store="Walmart"
