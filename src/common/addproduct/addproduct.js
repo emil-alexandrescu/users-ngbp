@@ -25,6 +25,9 @@ angular.module('addproduct', [])
                         var parser = new DOMParser();
                         var dom = parser.parseFromString(response, "text/html");
                         var storeParser=detectStore(dom);
+                        storeParser.get_cart_box(dom);
+
+
                         var product_info;
                         try{
                             product_info = storeParser.get_product_page_info(dom);

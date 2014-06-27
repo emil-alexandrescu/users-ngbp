@@ -4,6 +4,7 @@
     <list default="true" id="3a4ae3be-40b5-446c-9802-e035e6c02760" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/addproduct/addproduct.js" afterPath="$PROJECT_DIR$/src/common/addproduct/addproduct.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/addproduct/detectstore.js" afterPath="$PROJECT_DIR$/src/common/addproduct/detectstore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="users-ngbp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +39,7 @@
       <file leaf-file-name="avatar.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/avatar/avatar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="26" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+            <state line="30" column="26" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="884">
               <folding />
             </state>
           </provider>
@@ -47,7 +48,7 @@
       <file leaf-file-name="addproduct.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/addproduct/addproduct.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="57" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+            <state line="24" column="24" selection-start="1063" selection-end="1173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
               <folding />
             </state>
           </provider>
@@ -56,7 +57,16 @@
       <file leaf-file-name="detectstore.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/addproduct/detectstore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="8" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.8314256" vertical-offset="153" max-vertical-offset="5389">
+            <state line="221" column="11" selection-start="8219" selection-end="8219" vertical-scroll-proportion="0.433923" vertical-offset="3340" max-vertical-offset="5440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detectstore_addfromcart.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/addproduct/detectstore_addfromcart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="27" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.0" vertical-offset="875" max-vertical-offset="2533">
               <folding />
             </state>
           </provider>
@@ -74,7 +84,7 @@
       <file leaf-file-name="productsave.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/addproduct/productsave.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="1207">
+            <state line="33" column="0" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
@@ -83,7 +93,7 @@
       <file leaf-file-name="parse-users.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/users/user-interface/parse-users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2635">
+            <state line="2" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="2635">
               <folding />
             </state>
           </provider>
@@ -114,10 +124,15 @@
         <option value="$PROJECT_DIR$/src/common/avatar/avatar.tpl.html" />
         <option value="$PROJECT_DIR$/src/common/avatar/avatar.js" />
         <option value="$PROJECT_DIR$/src/common/addproduct/productsave.js" />
-        <option value="$PROJECT_DIR$/src/common/addproduct/addproduct.js" />
         <option value="$PROJECT_DIR$/src/common/users/extensionstorage.js" />
         <option value="$PROJECT_DIR$/../../../javascriptextractor/extension/extension.js" />
+        <option value="$PROJECT_DIR$/src/common/addproduct/addproduct.js" />
+        <option value="$PROJECT_DIR$/../../../survzilla/survzilla_admin/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/../../../survzilla/survzilla_admin/application/views/admin_login.php" />
+        <option value="$PROJECT_DIR$/src/common/addproduct/addfromcart.js" />
+        <option value="$PROJECT_DIR$/../cartbox/public/src/common/addproduct/detectstore_addfromcart.js" />
         <option value="$PROJECT_DIR$/src/common/addproduct/detectstore.js" />
+        <option value="$PROJECT_DIR$/src/common/addproduct/detectstore_addfromcart.js" />
       </list>
     </option>
   </component>
@@ -256,6 +271,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3a4ae3be-40b5-446c-9802-e035e6c02760" name="Default" comment="" />
@@ -268,25 +300,25 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -308,152 +340,192 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/addproduct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1163" selection-end="1163" vertical-scroll-proportion="-26.153847" vertical-offset="0" max-vertical-offset="782">
+        <state line="15" column="50" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="935">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/detectstore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="50" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="5457">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/detectstore_addfromcart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="1" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/users/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="17" selection-start="2738" selection-end="2738" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="3808">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/productsave.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/users/user-interface/parse-users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="2635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/avatar/avatarupload.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/avatar/avatar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="26" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/addproduct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="50" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/detectstore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="50" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="5457">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/detectstore_addfromcart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="1" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/users/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="17" selection-start="2738" selection-end="2738" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="3808">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/productsave.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/users/user-interface/parse-users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="2635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1163" selection-end="1163" vertical-scroll-proportion="-26.153847" vertical-offset="0" max-vertical-offset="782" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/karma/karma-unit.tpl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="51" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1156">
-          <folding />
-        </state>
+        <state line="54" column="51" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1156" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/karma-coffee-preprocessor/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="12" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <folding />
-        </state>
+        <state line="18" column="12" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../survzilla/jQuery-File-Upload-master/angularjs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="63" selection-start="4001" selection-end="4001" vertical-scroll-proportion="0.20715836" vertical-offset="1186" max-vertical-offset="3689">
-          <folding />
-        </state>
+        <state line="81" column="63" selection-start="4001" selection-end="4001" vertical-scroll-proportion="0.20715836" vertical-offset="1186" max-vertical-offset="3689" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="52" selection-start="1113" selection-end="1113" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="2125">
-          <folding />
-        </state>
+        <state line="16" column="52" selection-start="1113" selection-end="1113" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="2125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/addproduct/addproduct.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="10" selection-start="311" selection-end="311" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
+        <state line="6" column="10" selection-start="311" selection-end="311" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="238" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/home/home.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="502" selection-end="502" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
+        <state line="10" column="6" selection-start="502" selection-end="502" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="272" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="28" selection-start="126" selection-end="126" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
+        <state line="5" column="28" selection-start="126" selection-end="126" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="357" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="20" column="0" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/templates-common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="2052" selection-end="2052" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="8415">
-          <folding>
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1403683609887" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="27" column="4" selection-start="2052" selection-end="2052" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="8415" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/grunt/lib/grunt/task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="256" column="4" selection-start="8845" selection-end="8845" vertical-scroll-proportion="0.33298647" vertical-offset="3913" max-vertical-offset="7769">
-          <folding />
-        </state>
+        <state line="256" column="4" selection-start="8845" selection-end="8845" vertical-scroll-proportion="0.33298647" vertical-offset="3913" max-vertical-offset="7769" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="50" selection-start="4057" selection-end="4057" vertical-scroll-proportion="-14.52" vertical-offset="2102" max-vertical-offset="11543">
-          <folding />
-        </state>
+        <state line="145" column="50" selection-start="4057" selection-end="4057" vertical-scroll-proportion="-14.52" vertical-offset="2102" max-vertical-offset="11543" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="69" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.0" vertical-offset="535" max-vertical-offset="1496">
-          <folding />
-        </state>
+        <state line="59" column="69" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.0" vertical-offset="535" max-vertical-offset="1496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/avatar/avatar.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="51" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
-          <folding />
-        </state>
+        <state line="0" column="51" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../dragoncloud/dragoncloudsync/src/php/web/application/logs/2014/06/24.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="115" selection-start="3954" selection-end="3954" vertical-scroll-proportion="0.41975307" vertical-offset="0" max-vertical-offset="891">
-          <folding />
-        </state>
+        <state line="22" column="115" selection-start="3954" selection-end="3954" vertical-scroll-proportion="0.41975307" vertical-offset="0" max-vertical-offset="891" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/like/like.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="59" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1326">
-          <folding />
-        </state>
+        <state line="12" column="59" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1326" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/comment/comment.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="5" selection-start="887" selection-end="887" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
+        <state line="21" column="5" selection-start="887" selection-end="887" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/comment/comment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="9" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
-          <folding />
-        </state>
+        <state line="27" column="9" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/avatar/avatarupload.tpl.html">
@@ -463,51 +535,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/src/common/users/user-interface/user-interface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="32" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="1717">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/users/parseServices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="42" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.5577524" vertical-offset="671" max-vertical-offset="2006">
-          <folding />
-        </state>
+        <state line="71" column="42" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.5577524" vertical-offset="671" max-vertical-offset="2006" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/users/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="18" selection-start="1989" selection-end="1989" vertical-scroll-proportion="0.53069717" vertical-offset="510" max-vertical-offset="1632">
-          <folding />
-        </state>
+        <state line="60" column="18" selection-start="1989" selection-end="1989" vertical-scroll-proportion="0.53069717" vertical-offset="510" max-vertical-offset="1632" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/users/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="961">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="961" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/users/user-interface/user-interface.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="35" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <folding />
-        </state>
+        <state line="31" column="35" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/users/user-interface/parse-users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/addproduct/productsave.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
@@ -521,9 +571,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../javascriptextractor/extension/extension.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="57" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.6815817" vertical-offset="756" max-vertical-offset="1717">
-          <folding />
-        </state>
+        <state line="83" column="57" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.6815817" vertical-offset="756" max-vertical-offset="1717" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/users/users.js">
@@ -533,16 +581,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../survzilla/survzilla_admin/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1393" selection-end="1393" vertical-scroll-proportion="0.7090909" vertical-offset="0" max-vertical-offset="935" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../survzilla/survzilla_admin/application/controllers/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.27272728" vertical-offset="255" max-vertical-offset="4301" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../survzilla/survzilla_admin/application/views/admin_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="44" selection-start="1990" selection-end="1990" vertical-scroll-proportion="0.6545454" vertical-offset="17" max-vertical-offset="1411" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/productsave.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cartbox/public/src/common/addproduct/detectstore_addfromcart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="961">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/addproduct/detectstore_addfromcart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="27" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.0" vertical-offset="875" max-vertical-offset="2533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/addproduct/addproduct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="57" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+        <state line="24" column="24" selection-start="1063" selection-end="1173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../javascriptextractor/interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="36" selection-start="3866" selection-end="3866" vertical-scroll-proportion="0.75234133" vertical-offset="552" max-vertical-offset="1513">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/addproduct/detectstore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="8" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.8314256" vertical-offset="153" max-vertical-offset="5389">
+        <state line="221" column="11" selection-start="8219" selection-end="8219" vertical-scroll-proportion="0.433923" vertical-offset="3340" max-vertical-offset="5440">
           <folding />
         </state>
       </provider>

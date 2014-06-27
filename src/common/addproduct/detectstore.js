@@ -1,3 +1,10 @@
+
+function makeProxyUrl(url){
+    if (url.substr(0,7) === 'http://') {url = 'http://toneproxy.appspot.com/' + url.substr(7);}
+    if (url.substr(0,8) === 'https://') {url = 'http://toneproxy.appspot.com/' + url.substr(8);}
+    if (url.substr(0,1) === '/') {url = 'http://toneproxy.appspot.com/' + url.substr(1);}
+    return url;
+}
 //basic duck type
 function StoreParser() {
     this.store=null;
@@ -53,9 +60,6 @@ function BestBuyParser() {
         console.log(null);
         return null;
     }
-    this.get_cart_box=function(dom){
-        
-    }
 }
 function WalmartParser() {
     this.store="Walmart"
@@ -70,7 +74,6 @@ function WalmartParser() {
             product_info['images'][0] = $(dom).find('img#mainImage').attr('src');
         }else{
             $(dom).find('.BoxSelection').each(function(index){
-                console.log($(this).parent());
                 product_info['images'][index] = $(this).parent().attr('onmouseover').match(/handleSwatchMouseOver\('([\w\d:\/_\-\.]+)'/)[1];
             });
         }
