@@ -40,6 +40,14 @@ function BestBuyParser() {
         product_info['sku'] = pdp_model_data.attr('data-sku-id');
         product_info['id'] = pdp_model_data.attr('data-product-id');
         product_info['product_name'] = JSON.parse(pdp_model_data.attr('data-names'))['short'];
+
+        product_info['categories'] = [];
+        $(dom).find('ul#breadcrumb-list li a').each(function(index){
+            if (index > 0){ //exclude "Best Buy"
+                product_info['categories'].push($(this).html());
+            }
+        });
+
         if ($(dom).find('div.regular-price').eq(0).length>0){
             product_info['current_price'] = $(dom).find('div.regular-price').eq(0).text().match(/[0-9\.]+/)[0];
             product_info['images'] = [];
@@ -69,6 +77,14 @@ function WalmartParser() {
         product_info['sku'] = $(dom).text().match(/upc:[\s]+'([\d]+)'/)[1];
         product_info['current_price'] = $(dom).text().match(/currentItemPrice:[\s]*([\d\.]+)/)[1];
         product_info['id'] = $(dom).text().match(/itemId:[\s]*([\d\.]+)/)[1];
+
+        product_info['categories'] = [];
+        var category_path = $(dom).text().match(/"unitName":[\s]*"([\d\w\-\/&,:]+)"/)[1];
+        var category_path_arr = category_path.split('/');
+        for (var i = 4; i< category_path_arr.length; i++){
+            product_info['categories'].push(category_path_arr[i]);
+        }
+
         product_info['images'] = [];
         if ($(dom).find('.BoxSelection').length === 0){
             product_info['images'][0] = $(dom).find('img#mainImage').attr('src');
@@ -104,6 +120,21 @@ function MagentoParser() {
         var id_match = $(dom).text().match(/"productId":"([\d]+)"/);
         product_info['id'] = id_match?id_match[1]:"";
 
+        product_info['categories'] = [];
+        $(dom).find('div.breadcrumbs ul li a').each(function(index){
+            if (index > 0){ //exclude "Home"
+                product_info['categories'].push($(this).text());
+            }
+        });
+        if (!product_info['categories'].length){
+            var url_piece = $(dom).find('meta[property="og:url"]').attr('content').split('/');
+            if (url_piece.length>4){
+                for (i=3; i<url_piece.length-1; i++){
+                    product_info['categories'].push(url_piece[i]);
+                }
+            }
+        }
+
 
         product_info['images'] = [];
         $(dom).find('div.more-views a').each(function(index){
@@ -130,6 +161,16 @@ function AmazonParser() {
 
         product_info['sku'] = $(dom).find('#ASIN').val();
         product_info['id'] = $(dom).find('#nodeID').val();
+
+        product_info['categories'] = [];
+        $(dom).find('li.breadcrumb a').each(function(index){
+            if (index > 0){ //exclude "Home"
+                product_info['categories'].push($(this).text().match(/[\w\d\.\-&,\s]+[\w]/)[0]);
+            }
+        });
+        if (!product_info['categories'].length){
+            product_info['categories'].push($(dom).find('html').html().match(/data\-category=["']([\w][\w\d\.\-&,]+)['"]/)[1]);
+        }
 
         product_info['images'] = [];
         var imgs = $(dom).text().match(/"main":\{"([\w\d:\/%\._\-]+)"/g);
@@ -182,6 +223,14 @@ function TargetParser() {
 
         product_info['id'] = $(dom).find('input[name="productId"]').val();
 
+        product_info['categories'] = [];
+        $(dom).find('div#breadcrumbs span a').each(function(index){
+            if (index > 0){ //exclude "target"
+                var category = $(this).text().match(/[\s]+([\d\w,&\s]+[\w])[\s]+/)[1];
+                if (category === 'Target') {return false;}
+                product_info['categories'].push(category);
+            }
+        });
 
         product_info['images'] = [];
         $(dom).find('a.scene7.imgAnchor img').each(function(index){
@@ -213,6 +262,13 @@ function DemandwareParser() {
             product_info['id'] = product_info['id'].match(/[\d\w\-_]+/)[0];
         }
         product_info['sku'] = product_info['id'];
+
+        product_info['categories'] = [];
+        $(dom).find('ol.breadcrumb li a').each(function(index){
+            if (index > 0){ //exclude "home"
+                product_info['categories'].push($(this).text());
+            }
+        });
 
         product_info['images'] = [];
         $(dom).find('div.product-thumbnails li.thumb a').each(function(index){
@@ -247,7 +303,7 @@ function ATGCommerceParser() {
                 return false;
             }
         });
-
+        product_info['categories'] = [];
         var product_id_el = $(dom).find('input').filter(function() {
 
             var str = $(this).attr('id') || $(this).attr('class');
