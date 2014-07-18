@@ -106,7 +106,7 @@ DemandwareParser.prototype.get_cart_box = function(dom, callback){
         callback(null);
     }
 }
-
+/*
 ATGCommerceParser.prototype.get_cart_box = function(dom, callback){
     var pos1 = $(dom).text().indexOf('items');
     var text1 = $(dom).text().substr(0, pos1);
@@ -142,3 +142,67 @@ ATGCommerceParser.prototype.get_cart_box = function(dom, callback){
         }
     }
 }
+
+NordstromParser.prototype.get_cart_box = function(dom, callback){
+    var cartbox_url = 'https://secure.nordstorm.com/shoppingbag.aspx';
+    $.ajax({
+        url: cartbox_url
+    }).done(function(response){
+            var parser = new DOMParser();
+            var cartbox_dom = parser.parseFromString(response, "text/html");
+            var url_array = [];
+            try{
+                $(cartbox_dom).find("div.item-module div.brand-name-style a").each(function(){
+                    url_array.push($(this).attr('href'));
+                });
+                callback(url_array);
+            }catch(e){
+                console.log(e);
+                callback(null);
+            }
+
+        });
+}
+
+WayfairParser.prototype.get_cart_box = function(dom, callback){
+    var cartbox_url = 'http://www.wayfair.com/session/public/basket.php';
+    $.ajax({
+        url: cartbox_url
+    }).done(function(response){
+            var parser = new DOMParser();
+            var cartbox_dom = parser.parseFromString(response, "text/html");
+            var url_array = [];
+            try{
+                $(cartbox_dom).find("div.iteminfo a").each(function(){
+                    url_array.push($(this).attr('href'));
+                });
+                callback(url_array);
+            }catch(e){
+                console.log(e);
+                callback(null);
+            }
+
+        });
+}
+
+HomedepotParser.prototype.get_cart_box = function(dom, callback){
+    var cartbox_url = 'http://www.homedepot.com/webapp/wcs/stores/servlet/OrderItemDisplayViewShiptoAssoc';
+    $.ajax({
+        url: cartbox_url
+    }).done(function(response){
+            var parser = new DOMParser();
+            var cartbox_dom = parser.parseFromString(response, "text/html");
+            var url_array = [];
+            try{
+                $(cartbox_dom).find("div.shopCartDescInfo a").each(function(){
+                    url_array.push($(this).attr('href'));
+                });
+                callback(url_array);
+            }catch(e){
+                console.log(e);
+                callback(null);
+            }
+
+        });
+}*/
+

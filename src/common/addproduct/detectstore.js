@@ -160,7 +160,8 @@ function AmazonParser() {
         product_info['current_price'] = current_price_match?current_price_match[1]:"";
 
         product_info['sku'] = $(dom).find('#ASIN').val();
-        product_info['id'] = $(dom).find('#nodeID').val();
+        //product_info['id'] = $(dom).find('#nodeID').val();
+        product_info['id'] = product_info['sku'];
 
         product_info['categories'] = [];
         $(dom).find('li.breadcrumb a').each(function(index){
@@ -239,7 +240,7 @@ function TargetParser() {
         console.log(product_info);
         return product_info;
     }
-    this.get_primaruky_image_element=function(dom) {
+    this.get_primary_image_element=function(dom) {
         console.log($(dom).find('a#heroZoomImage.scene7 img')[0]);
         return $(dom).find('a#heroZoomImage.scene7 img')[0];
     }
@@ -284,8 +285,129 @@ function DemandwareParser() {
         return $(dom).find('img.primary-image')[0];
     }
 }
+/*
+function AnthropologieParser(){
+    this.store = "Anthropologie";
+    this.get_product_page_info = function(dom){
+        var product_info = {};
+        product_info['product_name'] = $(dom).find('h1[itemprop="name"]').text();
+        product_info['product_name'] = $(dom).find('span[itemprop="price"]').text();
+    }
+}
 
-/*** ATGCommerce PARSER ***/
+function BananarepublicParser(){
+    this.store = "Bananarepublic";
+    this.get_product_page_info = function(dom){
+        var product_info = {};
+        product_info['product_name'] = $(dom).find('h1').text();
+        product_info['current_price'] = $(dom).find('noscript').text().match(/\$([\d\.]+)/)[1];
+        var canonical_url = $(dom).find('link[rel="canonical"]').attr('href');
+        var temp_arr = canonical_url.split('/');
+        product_info['sku'] = temp_arr[temp_arr.length-1].split('.')[0];
+        product_info['id'] = product_info['sku'].substr(1);
+        product_info['categories'] = [];
+        var temp_arr = $(dom).find('meta[name="keywords"]').attr('content').split(',');
+        for (var i = 1; i<temp_arr.length-1; i++){
+            product_info['categories'].push(temp_arr[i]);
+        }
+    }
+}
+
+function NordstromParser(){
+    this.store = "Nordstrom";
+    this.get_product_page_info=function(dom) {
+        var product_info = {};
+        product_info['product_name'] = $(dom).text().match(/"name":[\s]*"([\d\.\s\w&#;\-]+)"/)[1];
+        product_info['current_price'] = $(dom).text().match(/"regularPrice":[\s]*"\$([\d\.]+)"/)[1];
+        product_info['id'] =$(dom).text().match(/"styleId":[\s]*([\d\w]+)/)[1];
+        product_info['sku'] =$(dom).text().match(/"styleNumber":[\s]*"([\d\w]+)"/)[1];
+        product_info['categories'] = [];
+        $(dom).find('nav[id="breadcrumb-nav"] li a').each(function(index){
+            if (index > 0){ //exclude "home"
+                product_info['categories'].push($(this).text());
+            }
+        });
+        product_info['images'] = [];
+        $(dom).find('ul.image-thumbs li button').each(function(index){
+            product_info['images'].push('http://g.nordstromimage.com/imagegallery/store/product/'+$(this).attr('data-img-gigantic-filename'));
+        });
+        console.log(product_info);
+        return product_info;
+    }
+}
+
+function WayfairParser(){
+    this.store = "Wayfair";
+    this.get_product_page_info=function(dom) {
+        var product_info = {};
+        product_info['product_name'] = $(dom).find('meta[property="og:title"]').attr('content');
+        product_info['current_price'] = $(dom).find('meta[property="og:price:amount"]').attr('content');
+        product_info['id'] = $(dom).find('meta[property="og:upc"]').attr('content');
+        product_info['sku'] = $(dom).find('meta[property="og:upc"]').attr('content');
+
+        product_info['category'] = [];
+        product_info['category'].push($(dom).text().match(/CaName\s=\s"([\w\d\s'&\-]+)"/)[1]);
+
+        product_info['images']=[];
+        $(dom).find('div.carousel_slides img').each(function(index){
+            var img_url = $(this).attr('src');
+            img_url.replace(/lf\/[\d]+\/hash/, "lf/50/hash");
+            product_info['images'].push(img_url);
+        });
+        console.log(product_info);
+        return product_info;
+    }
+}
+
+function HomedepotParser(){
+    this.store = "Homedepot";
+    this.get_product_page_info=function(dom) {
+        var product_info = {};
+        product_info['product_name'] = $(dom).find('meta[itemprop="name"]').attr('content');
+        product_info['sku'] = $(dom).text().match(/CI_ItemMfrNum='([\w\d\-]+)'/)[1];
+        product_info['id'] = $(dom).text().match(/CI_ItemID='([\d]+)'/)[1];
+        product_info['current_price'] = $(dom).find('span[itemprop="price"]').text().match(/[\d\.]+/)[0];
+        product_info['category'] = [];
+        var category_str = $(dom).text().match(/"bcLivePersonData":"([\w\d\\\s,\-]+)"/)[1];
+        product_info['category'] = category_str.split('\u003e');
+        product_info['images'] = [];
+        product_info['images'] = $(dom).text().match(/"1000","mediaUrl":"([\w\d:\/%\._\-]+)"/g);
+        for (var i = 0; i < product_info['images'].length; i++ ){
+            var flag = true;
+            var url = product_info['images'][i].substr(19);
+            url = url.slice(0, url.length-1);
+            product_info['images'][i] = url;
+        }
+        console.log(product_info);
+        return product_info;
+    }
+}
+
+
+function JossandmainParser(){
+    this.store = "Jossandmain";
+    this.get_product_page_info=function(dom) {
+        var product_info = {};
+        product_info['product_name'] = $(dom).find('p#js_fxd_hd_title_txt').text();
+        product_info['sku'] = $(dom).find('input[name="sku"]').val();
+        product_info['id'] = $(dom).find('input[name="sku"]').val();
+        product_info['current_price'] = $(dom).find('input[name="price"]').val();
+
+        product_info['category'] = [];
+        product_info['category'].push($(dom).find('input[name="category_name"]').val());
+
+        product_info['images'] = [];
+        $(dom).find('li.thumbnail_bordered_spacing img').each(function(index){
+            var img_url = $(this).attr('src');
+            img_url.replace(/lf\/[\d]+\/hash/, "lf/53/hash");
+            product_info['images'].push(img_url);
+        });
+        console.log(product_info);
+        return product_info;
+    }
+}
+
+
 function ATGCommerceParser() {
     this.store="ATGCommerce";
     this.get_product_page_info=function(dom) {
@@ -337,7 +459,7 @@ function ATGCommerceParser() {
         }
         return null;
     }
-}
+}*/
 
 //sniffs the dom for the store type.
 //would return null or BestBuyParser or WalmartParser or MagentoParser
@@ -362,8 +484,16 @@ function detectStore(dom) {
             return new AmazonParser();
         case 'Demandware':
             return new DemandwareParser();
-        case 'ATGCommerce':
+        /*case 'ATGCommerce':
             return new ATGCommerceParser();
+        case 'Nordstrom':
+            return new NordstromParser();
+        case 'Wayfair':
+            return new WayfairParser();
+        case 'The Home Depot':
+            return new HomedepotParser();
+        case 'Joss and Main':
+            return new JossandmainParser();*/
         default:  //magento
             return null;
     }

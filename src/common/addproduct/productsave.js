@@ -41,6 +41,9 @@ function productSave(product_info, storeParser, productUrl, currentuser, func){
                             image_ids.push(new_cloudinaryobj['public_id']);
                         }
                         var productobj = new Product();
+                        for (i in product_info['categories']){
+                            product_info['categories'][i] = $('<textarea />').html(product_info['categories'][i]).text();
+                        }
                         productobj.save({
                             store: storeParser.store,
                             URL: productUrl,
